@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Nunito);
+    html {
+        height: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        perspective: 100px;
+        perspective-origin: 4000px 500px;
+        transform-style: preserve-3d;
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        font-family: Nunito;
+        font-size: 72px;
+        color: white;
+        background-color: rgba(255, 0, 0, 0.1);
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .world {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 8000px;
+        height: 100%;
+        transform-style: inherit;
+        transform: translateZ(0px);
+        z-index: 0;
+        background-image: url("http://1hdwallpapers.com/wallpapers/touhou_project.jpg");
+        background-size: 50% / cover;
+    }
+    /* For background image to show only
+.float:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+*/
+
+
+    .float {
+        position: absolute;
+        display: inline-block;
+        transform-style: inherit;
+        /*text-shadow: 2px 2px 5px #000;*/
+    }
+
+    .depth5 {
+        transform: translateZ(5px);
+        z-index: 5;
+    }
+
+    .depth10 {
+        transform: translateZ(10px);
+        z-index: 10;
+    }
+
+    .depth15 {
+        transform: translateZ(15px);
+        z-index: 15;
+    }
+
+    .depth20 {
+        /*transform: translateZ(20px);*/
+        z-index: -20;
+    }
+
+    .depth30 {
+        transform: translateZ(30px);
+        z-index: 30;
+    }
+
+    .purple {
+        color: purple;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .green {
+        color: green;
+    }
+
+    .panel-main {
+        width: auto;
+        height: auto;
+
+        text-align: center;
+        font-size: 30px;
+        color: #133127;
+        padding: 10px;
+    }
+    p.contenido{
+        color: #133127;
+        font-size: 25px;
+    }
+
+    .box{
+        text-align: center;
+        color: #131313;
+        width: 300px;
+        background-color: #fff;
+        font-size: 12px;
+
+    }
+    div.box-header{
+        background: #133127;
+        color:#abd000;
+        padding: 0px 50px;
+        font-size:24px;
+        transform: translateZ(5px);
+        z-index: 5;
+    }
+
+    @media (max-width: 600px) {
+    .bck {
+        width: 50%;
+    }
+}
+</style>
+
+<body>
+    <div class="world">
+        <div class="float depth20 purple" style=""><img src="img-back.png" ></div>
+        <div class="float depth10 green"><img src="clouds-min.png" ></div>
+
+        <div class="float depth30 red" style="left: 2150px; top: 250px;"><img src="mujer-nino.png" width="57%" alt=""></div>
+        <div class="float depth5 panel-main" style="left: 850px; top: 500px">
+            <p class="contenido">
+                Con las comunidades paso a paso <br>
+                construimos justicia y sustentabilidad <br>
+                ambiental en los territorios
+            </p>
+
+        </div>
+
+        <!-- <div class="float depth15 panel paper" style="left: 2000px; top: 350px">Whatever</div>
+            <div class="float depth10 green" style="left: 3100px; top: 500px;">GWT</div> -->
+
+        <div class="float depth15" style="left: 3500px; top: 500px;"><img src="mujer-planta.png" width="70%" alt=""></div>
+        <div class="float depth30" style="left: 3500px; top: 400px;">
+            <!-- <div class="row box">
+                <div class="col-sm-12 box-header">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam vel impedit, ab velit cupiditate voluptatum maxime in odio et voluptas eum aliquam libero optio placeat. Accusamus incidunt earum mollitia dolore.
+                </div>
+                <div class="col-sm-12">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic neque dolorem, asperiores saepe voluptates corrupti architecto dolorum atque error ad quia nisi magni facilis quam nihil consequuntur dolore eaque tempore!
+                </div>
+            </div> -->
+            <!-- <div class="box">
+                <div class="box-header" style="display:inline-block;">
+                        <p style="padding:10px">Quiénes somos</p>
+                </div>
+                <div class="" style="font-size:24px; display:inline-block;">
+                    <p>       Caminando el Territorio es una organización
+                            social que diseña, asesora e implementa
+                            procesos de investigación, educación
+                            y gestión ambiental con enfoque
+
+                            participativo en los sectores comunitario,
+                            institucional y empresarial a favor de la
+                            justicia y la sustentabilidad ambiental territorial.</p>
+                </div>
+
+            </div> -->
+        </div>
+        <div class="float depth15" style="left: 5550px; top: 250px;"><img src="serpientes.png" width="70%" alt=""></div>
+        <div class="float depth15" style="left: 7500px; top: 350px;"><img src="hombre.png" width="90%" alt=""></div>
+        <div class="float" style="left: 8000px; top: 0px;"><img src="hombre2.png"  alt=""></div>
+        <div class="float depth15" style="left: 10230px; top: 280px;"><img src="venado3.png" alt=""></div>
+    </div>
+</body>
+
+</html>
